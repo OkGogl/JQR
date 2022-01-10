@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>KeyBox</title>
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="att.css">
+</head>
+<body>
+	<div align="center" id="Box">
+
+	</div>
+	<script type="text/javascript">
+		$('div').addClass("box");
+
+		let posit = 0;
+		$("body").keydown(function(event) {console.log(event.which);
+			if(event.which == 39) {
+				posit +=50;
+				$("#Box").css('left', posit + "px");
+			}
+			else if(event.which == 37) {
+				posit -=50;
+				$('#Box').css('left', posit + "px");
+			}
+		});
+	</script>
+</body>
+</html>
